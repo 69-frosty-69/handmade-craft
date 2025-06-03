@@ -1,7 +1,7 @@
 Handmade Crafts - Mini Product Portal
 ======================================
 
-🛠 TECHNOLOGY USED
+TECHNOLOGY USED
 ------------------
 - Backend: Core PHP
 - Database: MySQL (via XAMPP)
@@ -9,7 +9,7 @@ Handmade Crafts - Mini Product Portal
 - Version Control: Git
 - Bonus: Dockerized project
 
-📁 PROJECT STRUCTURE
+PROJECT STRUCTURE
 ---------------------
 /admin/
     add_product.php      -> Admin-only page to add products with images
@@ -28,7 +28,7 @@ Handmade Crafts - Mini Product Portal
 /uploads/
     [Uploaded product images]
 
-📦 SETUP INSTRUCTIONS (Local)
+SETUP INSTRUCTIONS (Local)
 ------------------------------
 1. Install XAMPP and start Apache + MySQL.
 2. Create MySQL database: `handmade_crafts`
@@ -36,12 +36,12 @@ Handmade Crafts - Mini Product Portal
 4. Place project folder in `htdocs/`
 5. Access site via: http://localhost/handmade-crafts-portal/public/
 
-🖼 Admin Credentials (for testing)
+Admin Credentials (for testing)
 -----------------------------------
 - Username: admin
 - Password: admin123
 
-🧪 FEATURES
+FEATURES
 -----------
 ✅ Admin can add products  
 ✅ Products display on homepage  
@@ -50,7 +50,7 @@ Handmade Crafts - Mini Product Portal
 ✅ Image upload for each product  
 ✅ Secure pages using session-based role check  
 
-🐳 DOCKERIZED SETUP
+DOCKERIZED SETUP
 --------------------
 1. Ensure Docker and Docker Compose are installed.
 2. In project root, run:
@@ -59,37 +59,17 @@ Handmade Crafts - Mini Product Portal
 
 3. Access app at: http://localhost:8080
 
-📸 SCREENSHOTS
---------------
-- homepage.png
-- product.png
-- order-form.png
-- admin-add-product.png
+Screenshots
+--------------------
 
-🗃 DATABASE FILES
+![Screenshot 1](./screenshots/screenshots/1 (1).png)
+![Screenshot 2](./screenshots/screenshots/1 (2).png)
+![Screenshot 3](./screenshots/screenshots/1 (3).png)
+![Screenshot 4](./screenshots/screenshots/1 (4).png)
+![Screenshot 5](./screenshots/screenshots/1 (5).png)
+![Screenshot 5](./screenshots/screenshots/1 (6).png)
+
+DATABASE FILES
 ------------------
 - `database.sql` – contains schema for `users`, `products`, `orders`
-
-✅ TASKS COMPLETED
--------------------
-- [x] Project folder with Git
-- [x] MySQL DB with 3 tables
-- [x] Admin product add form
-- [x] Homepage listing
-- [x] Product detail view
-- [x] Order form
-- [x] PHP form validation
-- [x] User login/register/logout
-- [x] Image upload
-- [x] README + screenshots
-- [x] Dockerized project
-
-🎓 SUBMISSION
---------------
-- GitHub Repo: https://github.com/yourusername/handmade-crafts-portal
-- Included:
-  - All source files
-  - README.txt
-  - `database.sql`
-  - Screenshot images
 

@@ -1,6 +1,8 @@
 <?php
 require_once "../config/db.php";
 
+
+
 // Check if ID is set in URL
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die("Invalid product ID.");
@@ -30,18 +32,22 @@ if (!$product) {
 </head>
 <body>
 
-<!-- ✅ Navbar -->
+<!--  Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">Handmade Crafts</a>
     </div>
 </nav>
 
-<!-- ✅ Product Details -->
+<!--  Product Details -->
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="https://via.placeholder.com/500" class="img-fluid" alt="Product Image">
+            <?php if ($product["image"]): ?>
+                        <img src="../uploads/<?= htmlspecialchars($product["image"]) ?>" class="card-img-top" alt="Product Image">
+                    <?php else: ?>
+                        <img src="https://via.placeholder.com/400x300?text=No+Image" class="card-img-top" alt="No image">
+                    <?php endif; ?>
         </div>
         <div class="col-md-6">
             <h2><?= htmlspecialchars($product['name']) ?></h2>

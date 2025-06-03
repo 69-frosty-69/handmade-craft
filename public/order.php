@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
 require_once "../config/db.php";
 
 // Initialize
@@ -27,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($name) || empty($address)) {
         $error = "Please fill in all fields.";
     } else {
-        $sql = "INSERT INTO orders (product_id, name, address) VALUES (:product_id, :name, :address)";
+        $sql = "INSERT INTO orders (product_id, customer_name, address) VALUES (:product_id, :name, :address)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":product_id", $product_id);
         $stmt->bindParam(":name", $name);
@@ -54,9 +62,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!--  Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">Handmade Crafts</a>
-    </div>
+<ul class="navbar-nav ms-auto">
+    <?php if (isset($_SESSION['user_id'])): ?>
+        <li class="nav-item">
+            <a class="nav-link" href="logout.php">Logout (<?= htmlspecialchars($_SESSION['username']) ?>)</a>
+        </li>
+    <?php else: ?>
+        <li class="nav-item">
+            <a class="nav-link" href="login.php">Login</a>
+        </li>
+    <?php endif; ?>
+</ul>
 </nav>
 
 <!--  Order Form -->

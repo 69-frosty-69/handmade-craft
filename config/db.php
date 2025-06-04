@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";       // XAMPP default
+$host = "db";       // XAMPP default
 $dbname = "handmade_crafts";
 $username = "root";        // Default for XAMPP
-$password = "";            // Default (no password)
+$password = "root";            // Default (no password)
 
 try {
     // PDO = PHP Data Object, safer for DB access

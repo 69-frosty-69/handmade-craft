@@ -1,9 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
+
 ?>
 
 <?php
@@ -35,6 +32,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php else: ?>
         <li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
         </li>
     <?php endif; ?>
 </ul>

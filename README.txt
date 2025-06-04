@@ -71,5 +71,5 @@ Screenshots
 
 DATABASE FILES
 ------------------
-- `database.sql` – contains schema for `users`, `products`, `orders`
+- `/assets/handmade_crafts.sql` – contains schema for `users`, `products`, `orders`
 
